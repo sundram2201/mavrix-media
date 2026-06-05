@@ -1,0 +1,51 @@
+/* ============================================================
+   MAVRIX MEDIA — responsive.css
+   Breakpoints + accessibility (reduced motion).
+   Loaded last so its overrides win.
+   ============================================================ */
+
+/* --- Tablet / small laptop --- */
+@media (max-width:980px){
+  section{padding:88px 0}
+  .head-block{margin-bottom:48px}
+  .nav-links{display:none}
+  .burger{display:flex}
+  .vs-grid{grid-template-columns:1fr}
+  .vs-mid{padding:6px 0}
+  .vs-arrow{transform:rotate(90deg)}
+  .fw-grid{grid-template-columns:repeat(2,1fr)}
+  .svc-grid{grid-template-columns:1fr 1fr}
+  .aud-bento{grid-template-columns:repeat(3,1fr)}
+  .aud-intro{grid-column:span 3;grid-row:span 1;min-height:auto}
+  .why-grid{grid-template-columns:1fr}
+  .cs-grid{grid-template-columns:1fr}
+  .tst-grid{grid-template-columns:1fr 1fr}
+  .book-grid{grid-template-columns:1fr;gap:34px}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+
+/* --- Phone --- */
+@media (max-width:620px){
+  .wrap{padding:0 20px}
+  section{padding:72px 0}
+  .nav-cta .btn-ghost{display:none}
+  .hero{padding:104px 0 56px}
+  .fw-grid{grid-template-columns:1fr}
+  .fw-step{min-height:auto}
+  .svc-grid{grid-template-columns:1fr}
+  .aud-bento{grid-template-columns:repeat(2,1fr)}
+  .aud-intro{grid-column:span 2}
+  .tst-grid{grid-template-columns:1fr}
+  .form{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr}
+  .trust .ti{flex:1 1 100%}
+  .sticky-cta .sc span{display:none}
+  .sticky-cta .sc{padding:14px;border-radius:50%}
+}
+
+/* --- Reduced motion --- */
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+  .reveal{opacity:1;transform:none}
+  .hero-title .ln i{transform:none}
+}
